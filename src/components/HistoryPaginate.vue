@@ -3,7 +3,7 @@
     <Paginate
         v-model="page"
         :page-count="pageCount"
-        :click-handler="PageChangeHandler"
+        :click-handler="pageChangeHandler"
         :prev-text="'Назад'"
         :next-text="'Вперёд'"
         :container-class="'pagination'"
@@ -11,7 +11,7 @@
     />
 
     <div class="input-field col s12">
-      <select>
+      <select v-model="pageSize">
         <option value="5">5</option>
         <option value="10">10</option>
         <option value="15">15</option>

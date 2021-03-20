@@ -10,11 +10,16 @@ export default {
       items: [],
     }
   },
+  watch: {
+    pageSize: () => {
+      this.pageChangeHandler(this.page)
+    }
+  },
   methods: {
     changePageSize(size) {
       this.pageSize = size
     },
-    PageChangeHandler(page) {
+    pageChangeHandler(page) {
       this.$router.push(`${this.$route.path}?page=${page}`)
       this.items = this.allItems[page - 1] || this.allItems(0)
 

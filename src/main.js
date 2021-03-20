@@ -6,6 +6,7 @@ import dateFilter from "@/filters/date.filter";
 import currencyFilter from "@/filters/currency.filter";
 import messagePlugin from '@/utils/message.plugin'
 import store from './store'
+import Paginate from 'vuejs-paginate'
 import tooltipDirective from '@/directives/tooltip.directives'
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
@@ -22,6 +23,7 @@ Vue.filter('date', dateFilter)
 Vue.filter('currency', currencyFilter)
 Vue.directive('tooltip', tooltipDirective)
 Vue.component('Loader', Loader)
+Vue.component('Paginate', Paginate)
 
 firebase.initializeApp({
   apiKey: "AIzaSyBJ2Z4tSpUsFQ-UZA9SSlo93V2ok50WyKk",
